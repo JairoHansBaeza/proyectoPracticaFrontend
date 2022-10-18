@@ -1,0 +1,19 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col>
+      <ion-card *ngFor="let product of products">
+        <ion-img class="px-3" [src]="product.image"></ion-img>
+        <ion-card-header class="px-5">
+          <ion-card-subtitle class="fs-16">{{product.category}} - {{product.brand}}</ion-card-subtitle>
+          <ion-card-title class="fs-20">{{product.name}}</ion-card-title>
+          <span class="pt-2 fs-16">$ {{product.price}}</span>
+        </ion-card-header>
+        <ion-button (click)="addToCart()" class="ion-margin mt-2" expand="block" fill="outline" shape="round">
+          <ion-icon slot="start" name="add"></ion-icon>
+          Add to cart
+        </ion-button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
